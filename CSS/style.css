@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator {
+    margin: auto;
+    background-color: #dddddd;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 20em;
+    padding: 1em;
+    border: 2px solid #000000;
+}
+
+.display {
+    grid-column: span 3;
+    min-height: 2.5em;
+    background-color: #f0f0f0;
+    padding: .5em;
+    font-family: 'Roboto Mono', monospace;
+    text-align: right;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+.calculator button {
+    padding: .75em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 15px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.calculator #clear {
+    grid-column: span 2;
+    background-color: #cf4242;
+    color: #ffffff;
+    border: outset #cf4242bb;
+}
+
+.calculator #equal {
+    grid-column: span 2;
+    background-color: #4d5779;
+    color: #ffffff;
+    border: outset #4d5779bb;
+}
+
+.calculator .number, #del {
+    background-color: #bebebe;
+    border: outset #bebebebb;
+}
+
+.calculator .operator, #parentheses {
+    background-color: #868585;
+    border: outset #868585bb;
+}
+
+.calculator button:active, #equal:active, #clear:active, #del:active {
+    border: inset #dddddd;
+}
